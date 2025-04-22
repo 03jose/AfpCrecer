@@ -12,7 +12,7 @@ namespace PruebaTecnica.Tests
     public class ProductoServiceTests
     {
         [Fact]
-        public async Task CreateProducto_ShouldReturnTrue_WhenRepositorySucceeds()
+        public async Task CreateProducto_RetornaTRUE_CuandoEsSucceeds()
         {
             // Arrange
             var productoDTO = new ProductoDTO
