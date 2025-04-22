@@ -1,0 +1,10 @@
+CREATE PROCEDURE sp_Product_List
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	 SELECT productoId, Nombre, Descripcion, Precio, PrecioDescuento
+    FROM   Productos WITH (NOLOCK)
+    ORDER BY Nombre;
+END
+GO
