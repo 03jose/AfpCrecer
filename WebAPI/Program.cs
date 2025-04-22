@@ -1,6 +1,9 @@
 using PruebaTecnica.Application.Automapper;
 using Microsoft.EntityFrameworkCore;
 using PruebaTecnica.Infraestructure.Data;
+using PruebaTecnica.Domain.Interfaces;
+using PruebaTecnica.Application.Services;
+using PruebaTecnica.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,7 +21,8 @@ builder.Services.AddDbContext<DefaultDbContext>(options =>
 // Add AutoMapper
 builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 
-
+builder.Services.AddScoped<IProductosRepository, ProductoRepository>();
+builder.Services.AddScoped<ProductoService>();
 
 
 
